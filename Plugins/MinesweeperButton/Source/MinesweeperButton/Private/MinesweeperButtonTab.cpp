@@ -1,3 +1,4 @@
+// Copyright 2022 Silvan Teufel / Teufel-Engineering.com All Rights Reserved.
 
 #include "MinesweeperButtonTab.h"
 #include "MinesweeperButtonModule.h"
