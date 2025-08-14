@@ -7,7 +7,7 @@ public class MinesweeperButton : ModuleRules
 	public MinesweeperButton(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
-        bEnforceIWYU = true;
+        //bEnforceIWYU = true;
 
         PublicIncludePaths.AddRange(
 			new string[] {

@@ -2,13 +2,13 @@
 
 using UnrealBuildTool;
 
-public class Minesweeper : ModuleRules
+public class MineSweeperExample : ModuleRules
 {
-	public Minesweeper(ReadOnlyTargetRules Target) : base(Target)
+	public MineSweeperExample(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

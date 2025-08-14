@@ -1,0 +1,34 @@
+# Visual Studio / Rider
+.vs/
+.vscode/
+.idea/
+*.VC.db
+*.sln.dotsettings.user
+
+# Build files
+Binaries/
+Build/
+Intermediate/
+
+# Saved and other generated files
+Saved/
+DerivedDataCache/
+obj/
+Binaries/
+Intermediate/
+Plugins/Binaries/
+Plugins/Intermediate/
+
+# Other
+*.pdb
+*.exe
+*.dll
+*.obj
+*.pch
+*.ipch
+*.apk
+*.ipa
+*~
+*.swp
+*.lock
+*.bk

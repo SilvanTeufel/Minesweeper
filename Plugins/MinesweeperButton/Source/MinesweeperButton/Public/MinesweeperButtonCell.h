@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Widgets/SOverlay.h"
-#include "Dialogs/CustomDialog.h"
+//#include "Dialogs/CustomDialog.h"
 #include "MinesweeperButtonModel.h"
 #include "Data.h"
 

@@ -278,18 +278,32 @@ void FMinesweeperButtonController::Tick(float DeltaTime)
 }
 
 
-TArray< bool > FMinesweeperButtonController::CreateRandomMines(uint16 GridSize, uint16 Count)
+TArray<bool> FMinesweeperButtonController::CreateRandomMines(uint16 GridSize, uint16 Count)
 {
-
-	TArray< bool > Mines;
-	Mines.SetNum(GridSize);
-
+	TArray<bool> Mines;
+	Mines.Init(false, GridSize);
 	
-	for (int i = 0; i < Count; ++i)
+	if (Count > GridSize)
 	{
-		// m_i is the index of the mine
-		uint16 m_i = (uint16)round(GridSize * (((float)rand()) / ((float)RAND_MAX))) - 1;
-		Mines[m_i] && m_i>=0 ? i-- : Mines[m_i] = true;
+		Count = GridSize;
+	}
+	
+	TArray<int32> PossibleIndices;
+	PossibleIndices.SetNumUninitialized(GridSize);
+	for (int32 i = 0; i < GridSize; ++i)
+	{
+		PossibleIndices[i] = i;
+	}
+	
+	for (int32 i = PossibleIndices.Num() - 1; i > 0; --i)
+	{
+		int32 j = FMath::RandRange(0, i);
+		PossibleIndices.Swap(i, j);
+	}
+	
+	for (int32 i = 0; i < Count; ++i)
+	{
+		Mines[PossibleIndices[i]] = true;
 	}
 
 	return Mines;
