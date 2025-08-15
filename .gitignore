@@ -32,3 +32,4 @@ Plugins/Intermediate/
 *.swp
 *.lock
 *.bk
+*.sln
